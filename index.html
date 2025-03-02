@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almahdali Family</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #1f1f1f;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #333;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#about" onclick="showPage('about')">About Me</a>
+        <a href="#projects" onclick="showPage('projects')">Projects</a>
+        <a href="#contact" onclick="showPage('contact')">Contact</a>
+        <a href="#suggestions" onclick="showPage('suggestions')">Kasih Saran</a>
+    </div>
+    
+    <div class="container" id="about">
+        <h1>Tentang keluarga Syafiq Ganteng</h1>
+        <img src="Images/Foto About Me.jpeg" alt="Foto About Me">
+        <p>Halo! Saya Syafiq dari Keluarga Almahdali. Selamat datang di website Almahdali Family.</p>
+    </div>
+    
+    <div class="container" id="projects" style="display: none;">
+        <h1>Liburan 2024 [donis ra dijak]</h1>
+        <img src="Images/Foto Project.jpeg" alt="Foto Projects">
+        <p>yahaha hayyuk.</p>
+    </div>
+    
+    <div class="container" id="contact" style="display: none;">
+        <h1>Contact</h1>
+        <img src="Images/Foto Contact.jpeg" alt="Foto Contact">
+        <p>Email: tumiludin@example.com</p>
+        <p>Nomor: 0895 lanjutane mikir dewek</p>
+    </div>
+    
+    <div class="container" id="suggestions" style="display: none;">
+        <h1>Kasih Saran</h1>
+        <img src="Images/Foto Kasih Saran.jpeg" alt="Foto Kasih Saran">
+        <form>
+            <label for="email">Email Anda:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="saran">Saran Anda:</label><br>
+            <textarea id="saran" name="saran" rows="4" required></textarea><br><br>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    
+    <script>
+        function showPage(pageId) {
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('suggestions').style.display = 'none';
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
